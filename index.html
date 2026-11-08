@@ -5,25 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent Orange Awareness Memorial Archive</title>
     <style>
-        body { font-family: sans-serif; background-color: #f4f4f6; color: #222; text-align: center; padding: 20px; }
-        header { background-color: #1b261d; color: #fff; padding: 30px; border-radius: 8px; }
-        .btn { display: block; background-color: #1b261d; color: white; text-decoration: none; padding: 15px; margin: 15px auto; max-width: 300px; font-weight: bold; border-radius: 6px; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background-color: #f4f4f6; 
+            color: #222; 
+            text-align: center; 
+            padding: 20px; 
+            margin: 0;
+        }
+        header { 
+            background-color: #1b261d; /* Deep respectful military olive green */
+            color: #fff; 
+            padding: 35px 15px; 
+            border-radius: 8px; 
+        }
+        header h1 { margin: 0; font-size: 1.5rem; }
+        header p { margin: 8px 0 0 0; font-size: 0.9rem; opacity: 0.9; }
+        .container { max-width: 500px; margin: 0 auto; padding-top: 25px; }
+        .welcome-text { font-size: 1rem; color: #333; margin-bottom: 25px; line-height: 1.5; }
+        .btn { 
+            display: block; 
+            background-color: #1b261d; 
+            color: white; 
+            text-decoration: none; 
+            padding: 16px; 
+            margin: 15px 0; 
+            font-weight: bold; 
+            border-radius: 6px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer { margin-top: 40px; font-size: 0.8rem; color: #777; }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Agent Orange Awareness Memorial</h1>
-        <p>Honoring Our Vietnam Era Veterans</p>
+        <p>Honoring Our Vietnam Era Veterans & Preserving Their Legacies</p>
     </header>
-    <div style="margin-top: 30px;">
-        <p>Welcome to our digital archive. Please select a section below:</p>
+
+    <div class="container">
+        <p class="welcome-text">Welcome to our digital history archive. Please select a section below to explore community remembrance events or listen to the oral histories of our local heroes.</p>
         
-        <!-- BUTTON 1: LINKS DIRECTLY TO YOUR BIOGRAPHIES REPOSITORY -->
-        <a href="https://github.io" class="btn">🎖️ Veteran Biographies</a>
-        
-        <!-- BUTTON 2: LINKS TO YOUR FLAG RAISING CEREMONY PAGE -->
-        <a href="flag-raising.html" class="btn">🏛️ Community Events</a>
-        
+        <!-- NAVIGATION HUB BUTTONS -->
+        <a href="biographies.html" class="btn">🎖️ Veteran Biographies Archive</a>
+        <a href="flag-raising.html" class="btn">🏛️ Community Events & Ceremonies</a>
     </div>
+
+    <footer>
+        <p>Inner City Development and Educational Foundation • Dedicated with Respect</p>
+    </footer>
+
 </body>
+
 </html>
