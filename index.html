@@ -14,7 +14,6 @@
             line-height: 1.6;
         }
         
-        /* Persistent Top Navigation Bar */
         nav {
             background-color: #1b261d;
             padding: 12px 20px;
@@ -33,7 +32,6 @@
             text-decoration: underline;
         }
 
-        /* Main Orange Header Banner */
         header {
             background-color: #d96b27; 
             color: #fff;
@@ -58,7 +56,6 @@
             padding: 15px;
         }
 
-        /* Welcome Digital Hub Section */
         .intro-text {
             background: #fff;
             padding: 20px;
@@ -78,7 +75,6 @@
             margin: 10px 0 0 0;
         }
 
-        /* Hub Portal Grid Cards */
         .hub-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -112,7 +108,6 @@
             line-height: 1.4;
         }
         
-        /* Functional Buttons (Styled in normal casing) */
         .btn-link {
             display: inline-block;
             text-align: center;
@@ -128,7 +123,6 @@
             background-color: #b8541d;
         }
 
-        /* Section Headings */
         h2.section-heading {
             font-size: 1.2rem;
             color: #1b261d;
@@ -138,7 +132,6 @@
             margin-bottom: 15px;
         }
 
-        /* Content Display Cards */
         .content-card {
             background: #fff;
             border-radius: 8px;
@@ -161,7 +154,7 @@
         }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 6px;
@@ -193,14 +186,12 @@
 </head>
 <body>
 
-    <!-- TOP NAVIGATION MENU BAR -->
     <nav>
         <a href="#hub-top">Home Hub</a>
         <a href="#events-video">Community Events Video</a>
         <a href="#biographies">Biographies Archive</a>
     </nav>
 
-    <!-- ORANGE HEADER BANNER -->
     <header id="hub-top">
         <h1>Agent Orange Awareness Memorial</h1>
         <p>Honoring Our Vietnam Era Veterans & Preserving Their Legacies</p>
@@ -208,23 +199,19 @@
 
     <div class="container">
         
-        <!-- WELCOME SECTION -->
         <div class="intro-text">
             <h2>Welcome to the Digital Hub</h2>
             <p>Welcome to the digital hub... exploring our digital archive of vital veteran stories.</p>
         </div>
 
-        <!-- PORTAL GRID BUTTON CARDS -->
         <div class="hub-grid">
             
-            <!-- BUTTON 1: Navigates down to Community Events Video -->
             <div class="hub-card">
                 <h3>Community Events Video</h3>
                 <p>Watch updates, recorded ceremonies, and documentation of local military community gatherings.</p>
                 <a class="btn-link" href="#events-video">Watch Events Video &rarr;</a>
             </div>
 
-            <!-- BUTTON 2: Navigates down to Biographies -->
             <div class="hub-card">
                 <h3>Biographies Archive</h3>
                 <p>Explore the interactive registry of historical records, legacy stories, and veteran memories.</p>
@@ -233,27 +220,28 @@
 
         </div>
 
-        <!-- SECTION 1: COMMUNITY MEMBERS EVENTS VIDEO -->
-        <h2 class="section-heading" id="events-video">Community Members Events Video</h2>
-        <div class="content-card" style="border-left: 5px solid #1b261d;">
-            <p class="item-title">USS Kitty Hawk Flag Raising Ceremony</p>
-            <p class="item-details">American Legion Post 59 • Remembrance Event</p>
-            <div class="video-container">
-                <!-- Replace with your actual YouTube video embed code when ready -->
-                <iframe src="https://youtube.com" allowfullscreen></iframe>
+        <!-- SECTION 1: TARGET DESTINATION FOR BUTTON 1 -->
+        <div id="events-video" style="scroll-margin-top: 20px;">
+            <h2 class="section-heading">Community Members Events Video</h2>
+            <div class="content-card" style="border-left: 5px solid #1b261d;">
+                <p class="item-title">USS Kitty Hawk Flag Raising Ceremony</p>
+                <p class="item-details">American Legion Post 59 • Remembrance Event</p>
+                <div class="video-container">
+                    <iframe src="https://youtube.com" allowfullscreen></iframe>
+                </div>
+                <p class="item-description">
+                    Commemorating the legacy and service of our military community. This video captures the ceremonial flag raising, preserving our shared heritage and honoring those who served during the Vietnam era.
+                </p>
             </div>
-            <p class="item-description">
-                Commemorating the legacy and service of our military community. This video captures the ceremonial flag raising, preserving our shared heritage and honoring those who served during the Vietnam era.
-            </p>
         </div>
 
-        <!-- SECTION 2: BIOGRAPHIES ARCHIVE -->
-        <h2 class="section-heading" id="biographies">Biographies Archive</h2>
-        <div class="intro-text" style="text-align: left; padding: 15px; font-size: 0.9rem;">
-            Welcome to the biography registry. Scan the plaque at the memorial site to return to this archive section anytime to hear the firsthand accounts and permanent legacies of our heroes.
+        <!-- SECTION 2: TARGET DESTINATION FOR BUTTON 2 -->
+        <div id="biographies" style="scroll-margin-top: 20px;">
+            <h2 class="section-heading">Biographies Archive</h2>
+            <div class="intro-text" style="text-align: left; padding: 15px; font-size: 0.9rem;">
+                Welcome to the biography registry. Scan the plaque at the memorial site to return to this archive section anytime to hear the firsthand accounts and permanent legacies of our heroes.
+            </div>
         </div>
-
-        <!-- Future individual written or photo biographies go right underneath here -->
 
     </div>
 
