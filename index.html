@@ -3,71 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Orange Awareness Memorial Archive</title>
+    <title>Agent Orange Awareness Memorial - Veteran Biographies</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #f4f4f6;
-            color: #222;
-            text-align: center;
-            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f6eedf; /* Soft warm cream background matching index.html */
+            color: #222222; /* Clean charcoal dark text */
             margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
         header {
-            background-color: #1b261d; /* Deep respectful military olive green */
-            color: #fff;
-            padding: 35px 15px;
-            border-radius: 8px;
+            background-color: #b35a38; /* Muted terracotta/burnt earth orange hue */
+            color: #ffffff; /* Crisp white header text */
+            text-align: center;
+            padding: 30px 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
+            letter-spacing: 0.5px;
         }
         header p {
             margin: 8px 0 0 0;
-            font-size: 0.9rem;
-            opacity: 0.9;
+            font-size: 1rem;
+            opacity: 0.95;
         }
         .container {
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
-            padding-top: 25px;
+            padding: 20px 15px;
         }
-        .hub-description {
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
+        .intro-text {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            font-size: 1rem;
+            color: #333333;
+            text-align: center;
+            border: 1px solid #ebdcc5;
+        }
+        h2 {
+            font-size: 1.3rem;
+            color: #b35a38;
+            border-bottom: 2px solid #b35a38;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .biography-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
             margin-bottom: 25px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            font-size: 0.95rem;
-            color: #444;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+            border-left: 5px solid #b35a38;
         }
-        /* Navigation Button Styling */
-        .nav-button {
-            display: block;
-            width: 100%;
-            box-sizing: border-box;
-            background-color: #1b261d;
-            color: white;
-            padding: 16px;
-            margin: 12px 0;
-            font-size: 1.1rem;
+        .veteran-name {
+            font-size: 1.2rem;
             font-weight: bold;
+            margin: 0 0 5px 0;
+            color: #222222;
+        }
+        .veteran-details {
+            font-size: 0.85rem;
+            color: #666666;
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .veteran-story {
+            font-size: 0.95rem;
+            margin: 15px 0 0 0;
+            color: #444444;
+        }
+        .back-button {
+            display: block;
+            background-color: #4a4a4a; /* Dignified soft charcoal button */
+            color: #ffffff;
             text-decoration: none;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.2s ease;
+            padding: 12px 20px;
+            margin: 30px auto 10px auto;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            max-width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
-        .nav-button:hover {
-            background-color: #2c3e2f;
+        .back-button:hover {
+            background-color: #333333;
         }
-        /* Distinct accent color for the main external page button */
-        .biographies-btn {
-            background-color: #3d4a3e;
-        }
-        .biographies-btn:hover {
-            background-color: #4e5c4f;
+        footer {
+            text-align: center;
+            padding: 40px 15px;
+            font-size: 0.85rem;
+            color: #666666;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -79,17 +133,34 @@
     </header>
 
     <div class="container">
-        <div class="hub-description">
-            Welcome to the digital hub. Select an option below to browse local community events, watch ceremonial recordings, or explore our digital archive of oral veteran stories.
-        </div>
-   <!-- BUTTON 1: Now points straight to your video player page -->
-        <a href="biographies.html" class="nav-button">community events</a>
-
-        <!-- BUTTON 2: Stays available on your screen but stays safely blank -->
-        <a href="#" class="nav-button biographies-btn">agent orange biographies</a>
-
         
+        <div class="intro-text">
+            Welcome to the digital archive. Scan the plaque at the memorial site to return to this page anytime. Explore the video biographies below to hear the firsthand accounts, stories, and legacies of our local heroes.
+        </div>
+
+        <h2>Honor Roll & Video Biographies</h2>
+
+        <!-- USS KITTY HAWK CEREMONY CARD -->
+        <div class="biography-card">
+            <p class="veteran-name">USS Kitty Hawk Flag Raising Ceremony</p>
+            <p class="veteran-details">American Legion Post 59 • Remembrance Event</p>
+            <div class="video-container">
+                <!-- YOUR FULL WORKING YOUTUBE EMBED LINK -->
+                <iframe src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="veteran-story">
+                Commemorating the legacy and service of our military community. This video captures the ceremonial flag raising, preserving our shared heritage and honoring those who served during the Vietnam era.
+            </p>
+        </div>
+
+        <!-- RETURN HOME BUTTON -->
+        <a href="index.html" class="back-button">← Back to Hub</a>
+
     </div>
+
+    <footer>
+        <p>Inner City Development and Educational Foundation • Dedicated with Respect</p>
+    </footer>
 
 </body>
 </html>
