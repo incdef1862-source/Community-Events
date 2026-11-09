@@ -7,89 +7,258 @@
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f6eedf; /* Soft warm cream background */
-            color: #222222; /* Clean charcoal dark text */
+            background-color: #f4f4f6;
+            color: #222;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
-        header {
-            background-color: #b35a38; /* Muted terracotta/burnt earth orange hue */
-            color: #ffffff; /* Crisp white header text */
+        
+        /* Persistent Top Navigation Bar */
+        nav {
+            background-color: #1b261d;
+            padding: 12px 20px;
             text-align: center;
-            padding: 30px 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-bottom: 3px solid #d96b27;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        nav a:hover {
+            color: #d96b27;
+            text-decoration: underline;
+        }
+
+        /* Main Orange Header Banner */
+        header {
+            background-color: #d96b27; 
+            color: #fff;
+            text-align: center;
+            padding: 35px 15px;
         }
         header h1 {
             margin: 0;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             letter-spacing: 0.5px;
         }
         header p {
             margin: 8px 0 0 0;
-            font-size: 1rem;
-            opacity: 0.95;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            font-style: italic;
         }
+
         .container {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
-            padding: 30px 15px;
+            padding: 15px;
+        }
+
+        /* Welcome Digital Hub Section */
+        .intro-text {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             text-align: center;
         }
-        .intro-text {
-            font-size: 1.2rem;
-            color: #333333;
-            margin-bottom: 40px;
-            font-weight: 400;
+        .intro-text h2 {
+            margin-top: 0;
+            color: #1b261d;
+            font-size: 1.3rem;
         }
-        .nav-button {
-            display: block;
-            background-color: #4a4a4a; /* Dignified soft charcoal button */
-            color: #ffffff;
+        .intro-text p {
+            font-size: 0.95rem;
+            color: #444;
+            margin: 10px 0 0 0;
+        }
+
+        /* Hub Portal Grid Cards */
+        .hub-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: 500px) {
+            .hub-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .hub-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            border-top: 4px solid #d96b27;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hub-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.05rem;
+            color: #1b261d;
+        }
+        .hub-card p {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+        }
+        
+        /* Functional Buttons (Styled in normal casing) */
+        .btn-link {
+            display: inline-block;
+            text-align: center;
+            padding: 8px 12px;
+            background-color: #d96b27;
+            color: white;
             text-decoration: none;
-            padding: 15px 20px;
-            margin: 15px auto;
-            border-radius: 25px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        .btn-link:hover {
+            background-color: #b8541d;
+        }
+
+        /* Section Headings */
+        h2.section-heading {
+            font-size: 1.2rem;
+            color: #1b261d;
+            border-bottom: 2px solid #1b261d;
+            padding-bottom: 5px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* Content Display Cards */
+        .content-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .item-title {
             font-size: 1.1rem;
-            font-weight: 500;
-            max-width: 320px;
-            transition: background-color 0.2s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            color: #1b261d;
         }
-        .nav-button:hover {
-            background-color: #333333;
+        .item-details {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0 0 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 6px;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .item-description {
+            font-size: 0.9rem;
+            margin: 12px 0 0 0;
+            color: #444;
+        }
+
         footer {
             text-align: center;
-            padding: 40px 15px;
-            font-size: 0.85rem;
-            color: #666666;
-            margin-top: 50px;
+            padding: 30px 15px;
+            font-size: 0.8rem;
+            color: #fff;
+            background: #1b261d;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <!-- TOP NAVIGATION MENU BAR -->
+    <nav>
+        <a href="#hub-top">Home Hub</a>
+        <a href="#events-video">Community Events Video</a>
+        <a href="#biographies">Biographies Archive</a>
+    </nav>
+
+    <!-- ORANGE HEADER BANNER -->
+    <header id="hub-top">
         <h1>Agent Orange Awareness Memorial</h1>
         <p>Honoring Our Vietnam Era Veterans & Preserving Their Legacies</p>
     </header>
 
     <div class="container">
-       
-        <p class="intro-text">
-            Welcome to the digital hub... exploring our digital archive of vital veteran stories.
-        </p>
+        
+        <!-- WELCOME SECTION -->
+        <div class="intro-text">
+            <h2>Welcome to the Digital Hub</h2>
+            <p>Welcome to the digital hub... exploring our digital archive of vital veteran stories.</p>
+        </div>
 
-         <!-- MAIN NAVIGATION HUB BUTTONS -- >
-         <a href="index.html" class="nav-button">Community Events</a>
-        <a href="biographies.html" class="nav-button">Agent Orange Biographies</a>
+        <!-- PORTAL GRID BUTTON CARDS -->
+        <div class="hub-grid">
+            
+            <!-- BUTTON 1: Navigates down to Community Events Video -->
+            <div class="hub-card">
+                <h3>Community Events Video</h3>
+                <p>Watch updates, recorded ceremonies, and documentation of local military community gatherings.</p>
+                <a class="btn-link" href="#events-video">Watch Events Video &rarr;</a>
+            </div>
 
+            <!-- BUTTON 2: Navigates down to Biographies -->
+            <div class="hub-card">
+                <h3>Biographies Archive</h3>
+                <p>Explore the interactive registry of historical records, legacy stories, and veteran memories.</p>
+                <a class="btn-link" href="#biographies">Read Biographies &rarr;</a>
+            </div>
+
+        </div>
+
+        <!-- SECTION 1: COMMUNITY MEMBERS EVENTS VIDEO -->
+        <h2 class="section-heading" id="events-video">Community Members Events Video</h2>
+        <div class="content-card" style="border-left: 5px solid #1b261d;">
+            <p class="item-title">USS Kitty Hawk Flag Raising Ceremony</p>
+            <p class="item-details">American Legion Post 59 • Remembrance Event</p>
+            <div class="video-container">
+                <!-- Replace with your actual YouTube video embed code when ready -->
+                <iframe src="https://youtube.com" allowfullscreen></iframe>
+            </div>
+            <p class="item-description">
+                Commemorating the legacy and service of our military community. This video captures the ceremonial flag raising, preserving our shared heritage and honoring those who served during the Vietnam era.
+            </p>
+        </div>
+
+        <!-- SECTION 2: BIOGRAPHIES ARCHIVE -->
+        <h2 class="section-heading" id="biographies">Biographies Archive</h2>
+        <div class="intro-text" style="text-align: left; padding: 15px; font-size: 0.9rem;">
+            Welcome to the biography registry. Scan the plaque at the memorial site to return to this archive section anytime to hear the firsthand accounts and permanent legacies of our heroes.
+        </div>
+
+        <!-- Future individual written or photo biographies go right underneath here -->
 
     </div>
 
     <footer>
-        <p>Inner City Development and Educational Foundation • Dedicated with Respect</p>
+        <p>Inner City Development and Educational Foundation • Dedicated with Respect &copy; 2026</p>
     </footer>
 
 </body>
