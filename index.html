@@ -285,22 +285,12 @@ footer {
         Agent Orange Memorial Archive Visitor Count
     </p>
 
-  <div id="visitor-count" style="font-size:24px;font-family:monospace;font-weight:bold;">
-  
-</div>
+ 
 </div>
 
-<script>
-fetch('https://api.countapi.xyz/hit/agent-orange-memorial-laredo-2026/homepage')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('visitor-count').innerText =
-      String(data.value).padStart(6, '0');
-  })
-  .catch(() => {
-    document.getElementById('visitor-count').innerText = 'ERROR';
-  });
-</script>
+<div id="visitor-count">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=incdef1862.agent-orange-memorial&left_text=Visitors" alt="Visitor Count">
+</div>
 <footer>
     Inner City Development and Educational Foundation • Dedicated with Respect © 2026
 </footer>
