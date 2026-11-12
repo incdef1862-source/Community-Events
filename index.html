@@ -298,7 +298,7 @@ fetch('https://api.countapi.xyz/hit/agent-orange-memorial-laredo-2026/homepage')
       String(data.value).padStart(6, '0');
   })
   .catch(() => {
-    document.getElementById('visitor-count').innerText = '000000';
+    document.getElementById('visitor-count').innerText = 'ERROR';
   });
 </script>
 <footer>
